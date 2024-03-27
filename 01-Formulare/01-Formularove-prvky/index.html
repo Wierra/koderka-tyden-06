@@ -21,10 +21,8 @@
 		http://formular.itgirls.cz
 	-->
 
-
-
-		<!--
-			INPUT
+	<form method="POST" action="http://formular.itgirls.cz">
+		<!--INPUT
 			type="text" ... jde o textové pole, existují i další typy
 			name: název pole pro zpracování na serveru
 			id: jedinečný identifikátor pro popis pole, javascript, apod.
@@ -35,15 +33,10 @@
 			autofocus ... automaticky se "zaostří" při načtení stránky
 			disabled  ... vypnuté pole (neodesílá se na server)
 			readonly  ... jen pro čtení, nejde do něj psát, ale hodnota se odešle na server
-			required  ... povinné pole, kontroluje prohlížeč při pokusu o odeslání
-		-->
-
-
-
-		<!--
-			LABEL - popisek formulářového pole
-			for: id formulářového prvku, pro který je toto popisek
-		-->
+			required  ... povinné pole, kontroluje prohlížeč při pokusu o odeslání-->
+	<input type="text" id="jmeno" size="15" maxlength="15" placeholder="Křestní jméno" autofocus>
+		<!--LABEL - popisek formulářového pole
+			for: id formulářového prvku, pro který je toto popisek-->
 
 
 
@@ -185,7 +178,7 @@
 		-->
 
 
-
+	</form>
 
 </body>
 </html>
