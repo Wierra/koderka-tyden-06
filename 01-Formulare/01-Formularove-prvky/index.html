@@ -34,17 +34,15 @@
 			disabled  ... vypnuté pole (neodesílá se na server)
 			readonly  ... jen pro čtení, nejde do něj psát, ale hodnota se odešle na server
 			required  ... povinné pole, kontroluje prohlížeč při pokusu o odeslání-->
+	<label for="jmeno">Jméno</label>
 	<input type="text" id="jmeno" size="15" maxlength="15" placeholder="Křestní jméno" autofocus>
 		<!--LABEL - popisek formulářového pole
 			for: id formulářového prvku, pro který je toto popisek-->
-
-
-
-		<!--
-			Tlačítko - lze vytvořit dvěma způsoby
+		
+		<!--Tlačítko - lze vytvořit dvěma způsoby
 			1) <input type="submit" value="OK">
 			2) <button>OK<button>
-
+	
 			Ať už <input> nebo <button> s type="submit" je výchozí tlačítko,
 			které se "stiskne" a odešle formulář, když kdekoliv ve formuláři
 			stiskneme klávesu Enter.
@@ -61,8 +59,13 @@
 			Jen pro INPUT:
 			value: text na tlačítku
 		-->
-
-
+	<hr>
+	<!-- <input type="button" name="odeslat" value="Pošli mě...">
+	<hr>
+	<input type="submit" name="tlacitko" id="tlacitko" value="Pošli koment">
+	<hr> -->
+	<button type="submit" name="odeslat">Odeslat</button>
+	<hr>
 
 		<!--
 			Další typy vstupních polí:
@@ -73,67 +76,64 @@
 			NUMBER - číslo
 			Další atributy: min, max, step
 		-->
-
-
+	<label for="cislo">Počet</label>
+	<input type="number" name="cislo" id="cislo" min="0" max="50" placeholder="35"> 
+	<hr>
 		<!--
 			EMAIL - emailová adresa
 			URL - webová adresa
 		-->
-
-
-		<!--
-			TEL - telefonní číslo
+	<label for="email">E-mail</label>
+	<input type="email" name="email" id="email">
+	<hr>
+		<!--TEL - telefonní číslo
 			Občas se používá záměrně "nesprávně" pro zadávání čísel,
-			protože na mobilu většinou zobrazí klávesnici pouze s číslicemi 0-9.
-		-->
+			protože na mobilu většinou zobrazí klávesnici pouze s číslicemi 0-9.-->
+	<label for="telefon">Telefon</label>
+	<input type="telefon" name="telefon" id="telefon">
+	<hr>
+		<!--DATE - datum
+			DATETIME-LOCAL - datum a čas-->
+	<label for="datum">Datum</label>
+	<input type="date" name="datum" id="datum">
+	
+	<label for="datumcas">Datum a čas</label>
+	<input type="datetime-local" name="datumcas" id="datumcas">
+	<hr>
 
+		<!--PASSWORD - heslo
+			zobrazuje hvězdičky místo textu	-->
+	<label for="heslo">Heslo</label>
+	<input type="password" name="heslo" id="heslo">
+	<hr>		
 
-		<!--
-			DATE - datum
-			DATETIME-LOCAL - datum a čas
-		-->
-
-
-		<!--
-			PASSWORD - heslo
-			zobrazuje hvězdičky místo textu
-		-->
-
-
-		<!--
-			HIDDEN - skryté pole
+		<!--HIDDEN - skryté pole
 			Jeho hodnota value="..." se odesílá na server,
-			ale pole na stránce není vidět.
-		-->
+			ale pole na stránce není vidět.-->
+	<input type="hidden" name="skryte" value="jahoda">
 
 
 
 
-		<!--
-			TEXTAREA - víceřádkové textové pole
+		<!--TEXTAREA - víceřádkové textové pole
 			name: nazev ple pro zpracování na serveru
 			id: jedinečný identifikátor pro label nebo třeba JavaScript
 			rows: počet zobrazených řádků (ale do pole lze zadat víc)
 			cols: počet písmen na řádek
-			maxlength: max. počet znaků, která jdou zadat
-		 -->
+			maxlength: max. počet znaků, která jdou zadat -->
 
 
 
-		<!--
-			CHECKBOX - zaškrtávácí políčko
+		<!--CHECKBOX - zaškrtávácí políčko
 			<input type="checkbox">
 			name: název pole pro zpracování na serveru
 			id: jedinečný identifikátor pro label nebo třeba JavaScript
 			value: hodnota, která se při zaškrtnutí odešle na server
 			checked ... pokud atribut existuje, je pole zaškrtnuté
-			disabled, required
-		-->
+			disabled, required-->
 
 
-
-		<!--
-			RADIO - přepínače (jen jeden ze skupiny může být vybraný)
+		<!--RADIO - přepínače (jen jeden ze skupiny může být vybraný)
 			<input type="radio">
 
 			name: název pole pro zpracování na serveru
@@ -144,15 +144,11 @@
 
 			value: hodnota, která se při zaškrtnutí odešle na server
 			checked ... pokud atribut existuje, je pole zaškrtnuté
-			disabled, required
-		-->
+			disabled, required-->
 
 
 
-
-
-		<!--
-			SELECT - roletka, výběr z možností
+		<!--SELECT - roletka, výběr z možností
 			<select>
 				<option>...</option>
 			</select>
@@ -164,20 +160,13 @@
 
 			Atributy option:
 			value: hodnota, která se při výběru odešle na server
-			selected ... výchozí vybraná hodnota
-		-->
+			selected ... výchozí vybraná hodnota-->
 
 
-
-
-		<!--
-			FIELDSET - seskupení polí formuláře
+		<!--FIELDSET - seskupení polí formuláře
 			<fieldset>
 				<legend>...</legend>
-			</fieldset>
-		-->
-
-
+			</fieldset>	-->
 	</form>
 
 </body>
