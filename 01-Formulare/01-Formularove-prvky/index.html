@@ -10,16 +10,14 @@
 
 	<h1>Formulářové prvky</h1>
 
-	<!--
-		Formulář
+	<!--Formulář
 		action: adresa, kam se odesílají data
 		method: jakým způsobem se odesílají
 			- GET: jako součást adresy, omezené množství dat (max 2048 znaků)
 			- POST: "skrytě", bez omezení velikosti
 
 		Zkusíme formulář odesílat na adresu:
-		http://formular.itgirls.cz
-	-->
+		http://formular.itgirls.cz-->
 
 	<form method="POST" action="http://formular.itgirls.cz">
 		<!--INPUT
@@ -34,8 +32,13 @@
 			disabled  ... vypnuté pole (neodesílá se na server)
 			readonly  ... jen pro čtení, nejde do něj psát, ale hodnota se odešle na server
 			required  ... povinné pole, kontroluje prohlížeč při pokusu o odeslání-->
-	<label for="jmeno">Jméno</label>
-	<input type="text" id="jmeno" size="15" maxlength="15" placeholder="Křestní jméno" autofocus>
+	<fieldset>
+		<legend>Osobní údaje:</legend>
+		<label for="jmeno">Jméno</label>
+		<input type="text" id="jmeno" size="15" maxlength="15" placeholder="Křestní jméno" autofocus>
+		<label for="prijmeni">Příjmení</label>
+		<input type="text" id="prijmeni" size="15" maxlength="15" placeholder="Příjmení" autofocus>
+	</fieldset>
 		<!--LABEL - popisek formulářového pole
 			for: id formulářového prvku, pro který je toto popisek-->
 		
@@ -57,8 +60,7 @@
 			disabled ... vypnuté tlačítko
 
 			Jen pro INPUT:
-			value: text na tlačítku
-		-->
+			value: text na tlačítku	-->
 	<hr>
 	<!-- <input type="button" name="odeslat" value="Pošli mě...">
 	<hr>
@@ -67,15 +69,10 @@
 	<button type="submit" name="odeslat">Odeslat</button>
 	<hr>
 
-		<!--
-			Další typy vstupních polí:
-			<input type="xxx">, kde "xxx" určuje typ pole
-		-->
-
-		<!--
-			NUMBER - číslo
-			Další atributy: min, max, step
-		-->
+		<!--Další typy vstupních polí:
+			<input type="xxx">, kde "xxx" určuje typ pole-->
+		<!--NUMBER - číslo
+			Další atributy: min, max, step-->
 	<label for="cislo">Počet</label>
 	<input type="number" name="cislo" id="cislo" min="0" max="50" placeholder="35"> 
 	<hr>
@@ -96,34 +93,31 @@
 			DATETIME-LOCAL - datum a čas-->
 	<label for="datum">Datum</label>
 	<input type="date" name="datum" id="datum">
-	
 	<label for="datumcas">Datum a čas</label>
 	<input type="datetime-local" name="datumcas" id="datumcas">
 	<hr>
-
 		<!--PASSWORD - heslo
 			zobrazuje hvězdičky místo textu	-->
 	<label for="heslo">Heslo</label>
 	<input type="password" name="heslo" id="heslo">
 	<hr>		
-
 		<!--HIDDEN - skryté pole
 			Jeho hodnota value="..." se odesílá na server,
 			ale pole na stránce není vidět.-->
 	<input type="hidden" name="skryte" value="jahoda">
-
-
-
-
+	<input type="color" name="barva">
+	<hr>
 		<!--TEXTAREA - víceřádkové textové pole
 			name: nazev ple pro zpracování na serveru
 			id: jedinečný identifikátor pro label nebo třeba JavaScript
 			rows: počet zobrazených řádků (ale do pole lze zadat víc)
 			cols: počet písmen na řádek
 			maxlength: max. počet znaků, která jdou zadat -->
-
-
-
+	<label for="adresa">Adresa</label>
+	<textarea name="adresa" id="adresa" rows="4" cols="20" placeholder="Trvalé bydliště">Ulice 8
+Město nad Metují
+368 25</textarea>
+	<hr>
 		<!--CHECKBOX - zaškrtávácí políčko
 			<input type="checkbox">
 			name: název pole pro zpracování na serveru
@@ -131,8 +125,9 @@
 			value: hodnota, která se při zaškrtnutí odešle na server
 			checked ... pokud atribut existuje, je pole zaškrtnuté
 			disabled, required-->
-
-
+	<input type="checkbox" name="souhlas" id="souhlas" value="souhlasím">
+	<label for="souhlas">Souhlasím s obchodními podmínkami</label>
+	<hr>
 		<!--RADIO - přepínače (jen jeden ze skupiny může být vybraný)
 			<input type="radio">
 
@@ -146,8 +141,17 @@
 			checked ... pokud atribut existuje, je pole zaškrtnuté
 			disabled, required-->
 
-
-
+	<!-- <label>Vyber svou velikost:</label> -->
+	<fieldset>
+		<legend>Vyber svou velikost:</legend>
+		<input type="radio" name="velikost" id="velikost 39" value="39">
+		<label for="velikost 39">Vel. 39</label>
+		<input type="radio" name="velikost" id="velikost 40" value="40">
+		<label for="velikost 40">Vel. 40</label>
+		<input type="radio" name="velikost" id="velikost 41" value="41">
+		<label for="velikost 41">Vel. 41</label>
+	</fieldset>
+	<hr>
 		<!--SELECT - roletka, výběr z možností
 			<select>
 				<option>...</option>
@@ -161,8 +165,13 @@
 			Atributy option:
 			value: hodnota, která se při výběru odešle na server
 			selected ... výchozí vybraná hodnota-->
-
-
+	<label for="mesto">Vyber město:</label>
+	<select name="mesto" id="mesto">
+		<option>---</option>
+		<option>Praha</option>
+		<option>Brno</option>
+		<option selected>Paříž</option>
+	</select>
 		<!--FIELDSET - seskupení polí formuláře
 			<fieldset>
 				<legend>...</legend>
