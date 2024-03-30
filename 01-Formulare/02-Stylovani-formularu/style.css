@@ -8,3 +8,14 @@ body {
 }
 
 /* ------------------------- */
+
+.form-pole{
+	margin-bottom: 20px;
+}
+
+.form-pole label{
+	display: block;
+	font-size: 15px;
+	font-weight: 400;
+	
+}
