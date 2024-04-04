@@ -12,19 +12,28 @@
 
 
 	<!-- Label a pole pod sebou -->
-<div class="form-pole">
-	<label for="jmeno">Jméno:</label>
+<form action="https://formular.itgirls.cz" method="POST">
+	<div class="form-pole">
+	<label for="jmeno">Jméno</label>
 	<input type="text" name="jmeno" id="jmeno">
-	<label for="prijmeni">Příjmení:</label>
-	<input type="text" name="prijmeni" id="prijmeni">
 </div>
-
-
-
+<div class="form-pole">
+	<label for="prijmeni">Příjmení<spam class="required">*</spam></label>
+	<input type="text" name="prijmeni" id="prijmeni" required>
+</div>
+<div class="form-pole">
+	<label for="adresa">Adresa</label>
+	<textarea name="adresa" id="adresa" rows="5"></textarea>
+</div>
 	<!-- Label a pole vedle sebe -->
-
-
-
+<div class="form-horizontal">
+	<label for="prezdivka">Přezdívka</label>
+	<input type="text" name="prezdivka" id="prezdivka">
+</div>
+<div class="form-horizontal">
+	<label for="vek">Věk</label>
+	<input type="number" name="vek" id="vek">
+</div>
 
 	<!--
 		Stylování textového pole <input> nebo <textarea> a tlačítek <button>
@@ -32,9 +41,25 @@
 		- stylovatelný bez problémů
 		- pozor v CSS - nemůžeme stylovat jen "input"
 	-->
+<div class="form-checkbox">
+	<input type="checkbox" name="souhlas" id="souhlas" value="ano">
+	<label for="souhlas">Souhlasím s podmínkami</label>
+</div>
 
 
-
+<label>Co si dáš:</label>
+<div class="form-radio">
+	<input type="radio" name="ovoce" id="ovoce1" value="Meloun">
+	<label	for="ovoce1">Meloun</label>
+</div>
+<div class="form-radio">
+	<input type="radio" name="ovoce" id="ovoce2" value="Kiwi">
+	<label	for="ovoce2">Kiwi</label>
+</div>
+<div class="form-radio">
+	<input type="radio" name="ovoce" id="ovoce3" value="Malina">
+	<label	for="ovoce3">Malina</label>
+</div>
 	<!--
 		Stylování checkbox nebo radio
 		- v podstatě nemožné stylovat
@@ -49,13 +74,23 @@
 	-->
 
 
-
+<div class="form-pole">
+	<label for="mesto">Vyber, kam se podíváš</label>
+	<select name="mesto" id="mesto">
+		<option value=""></option>
+		<option value="Londyn">Londýn, deštivé město</option>
+		<option value="Monako">Monako, slunné město</option>
+		<option value="Paříž">Paříž, plná turistů</option>	
+	</select>
+</div>
 
 	<!--
 		Stylování stavů formulářového pole
 		- :focus, :valid, :invalid, :placeholder-shown
 	-->
+	<button type="submit" class="tlacitko">ODESLAT</button>
 
+</form>
 
 </body>
 </html>
