@@ -14,25 +14,29 @@
 	<!-- Label a pole pod sebou -->
 <form action="https://formular.itgirls.cz" method="POST">
 	<div class="form-pole">
-	<label for="jmeno">Jméno</label>
-	<input type="text" name="jmeno" id="jmeno">
+	<label for="jmeno">Jméno<spam class="required">*</spam></label>
+	<input type="text" name="jmeno" id="jmeno" placeholder="Křestní jméno" required>
 </div>
 <div class="form-pole">
 	<label for="prijmeni">Příjmení<spam class="required">*</spam></label>
-	<input type="text" name="prijmeni" id="prijmeni" required>
+	<input type="text" name="prijmeni" id="prijmeni" placeholder="Rodné příjmení" required>
+</div>
+<div class="form-pole">
+	<label for="email">E-mail</label>
+	<input type="email" name="email" id="email" placeholder=" ">
 </div>
 <div class="form-pole">
 	<label for="adresa">Adresa</label>
-	<textarea name="adresa" id="adresa" rows="5"></textarea>
+	<textarea name="adresa" id="adresa" rows="5" placeholder=" "></textarea>
 </div>
 	<!-- Label a pole vedle sebe -->
 <div class="form-horizontal">
 	<label for="prezdivka">Přezdívka</label>
-	<input type="text" name="prezdivka" id="prezdivka">
+	<input type="text" name="prezdivka" id="prezdivka" placeholder=" ">
 </div>
 <div class="form-horizontal">
 	<label for="vek">Věk</label>
-	<input type="number" name="vek" id="vek">
+	<input type="number" name="vek" id="vek" placeholder=" ">
 </div>
 
 	<!--

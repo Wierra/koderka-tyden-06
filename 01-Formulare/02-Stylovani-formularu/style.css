@@ -28,6 +28,7 @@ form{
 
 .form-pole input[type="text"],
 .form-pole input[type="number"], 
+.form-pole input[type="email"], 
 .form-pole textarea,
 .form-pole select{
 	width: 100%;
@@ -38,7 +39,8 @@ form{
 }
 
 .form-pole input[type="text"]:focus,
-.form-pole input[type="number"]:focus, 
+.form-pole input[type="number"]:focus,
+.form-pole input[type="email"]:focus, 
 .form-pole textarea:focus,
 .form-pole select:focus{
 	outline: 2px solid yellowgreen;
@@ -49,6 +51,43 @@ input[type="checkbox"]:focus,
 input[type="radio"]:focus{
 	outline-color: pink;
 }
+
+/* .form-pole input[type="text"]:valid,
+.form-pole input[type="number"]:valid, 
+.form-pole textarea:valid,
+.form-pole select:valid{
+	background-color: aqua;
+	border-color: blue;
+}
+
+.form-pole input[type="text"]:invalid,
+.form-pole input[type="number"]:invalid, 
+.form-pole textarea:invalid,
+.form-pole select:invalid{
+	background-color: pink;
+	border-color: palevioletred;
+}
+
+.form-pole input[type="text"]:placeholder-shown{
+	outline: 5px solid orchid;
+} */
+
+.form-pole input[type="text"]:not(:placeholder-shown):valid,
+.form-pole input[type="number"]:not(:placeholder-shown):valid,
+.form-pole input[type="email"]:not(:placeholder-shown):valid,
+.form-pole textarea:not(:placeholder-shown):valid{
+	background-color: aqua;
+	border-color: blue;
+}
+
+.form-pole input[type="text"]:not(:placeholder-shown):invalid,
+.form-pole input[type="number"]:not(:placeholder-shown):invalid,
+.form-pole input[type="email"]:not(:placeholder-shown):invalid,
+.form-pole textarea:not(:placeholder-shown):invalid{
+	background-color: pink;
+	border-color: palevioletred;
+}
+
 
 .required{
 	color: red;
